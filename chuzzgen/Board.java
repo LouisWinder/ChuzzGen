@@ -214,8 +214,8 @@ public class Board extends JPanel
     	double random;
     	try {
     		// King
-    		King whiteKing = new King(new ImageIcon(ImageIO.read(new File("king_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'K', null);
-    		King blackKing = new King(new ImageIcon(ImageIO.read(new File("king_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'k', null);
+    		King whiteKing = new King(new ImageIcon(ImageIO.read(new File("pieces/king_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'K', null);
+    		King blackKing = new King(new ImageIcon(ImageIO.read(new File("pieces/king_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'k', null);
     		    		
     		availableWhite.add(whiteKing);
     		availableBlack.add(blackKing);
@@ -225,22 +225,22 @@ public class Board extends JPanel
     		// Queens
     		random = Math.random();
     		if (random < queenChance) {
-    		    availableWhite.add(new Queen(new ImageIcon(ImageIO.read(new File("queen_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'Q'));
+    		    availableWhite.add(new Queen(new ImageIcon(ImageIO.read(new File("pieces/queen_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'Q'));
     		}
     		random = Math.random();
     		if (random < queenChance) {
-    			availableBlack.add(new Queen(new ImageIcon(ImageIO.read(new File("queen_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'q'));
+    			availableBlack.add(new Queen(new ImageIcon(ImageIO.read(new File("pieces/queen_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'q'));
     		}
     		
     		// Castles
     		while (castleChance >= 0.25) {
     			random = Math.random();
     			if (random < castleChance) {
-    			    availableWhite.add(new Castle(new ImageIcon(ImageIO.read(new File("castle_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'R'));
+    			    availableWhite.add(new Castle(new ImageIcon(ImageIO.read(new File("pieces/castle_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'R'));
     			}
     			random = Math.random();
     			if (random < castleChance) {
-    				availableBlack.add(new Castle(new ImageIcon(ImageIO.read(new File("castle_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'r'));
+    				availableBlack.add(new Castle(new ImageIcon(ImageIO.read(new File("pieces/castle_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'r'));
     			}
     			castleChance /= 2;
     		}
@@ -249,11 +249,11 @@ public class Board extends JPanel
     		while (bishopChance >= 0.25) {
     			random = Math.random();
     			if (random < bishopChance) {
-    				availableWhite.add(new Bishop(new ImageIcon(ImageIO.read(new File("bishop_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'B'));
+    				availableWhite.add(new Bishop(new ImageIcon(ImageIO.read(new File("pieces/bishop_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'B'));
     			}
     			random = Math.random();
     			if (random < bishopChance) {
-    				availableBlack.add(new Bishop(new ImageIcon(ImageIO.read(new File("bishop_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'b'));
+    				availableBlack.add(new Bishop(new ImageIcon(ImageIO.read(new File("pieces/bishop_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'b'));
     			}
     			bishopChance /= 2;
     		}
@@ -262,11 +262,11 @@ public class Board extends JPanel
     		while (knightChance >= 0.25) {
     			random = Math.random();
     			if (random < knightChance) {
-    				availableWhite.add(new Knight(new ImageIcon(ImageIO.read(new File("knight_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'N'));
+    				availableWhite.add(new Knight(new ImageIcon(ImageIO.read(new File("pieces/knight_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'N'));
     			}
     			random = Math.random();
     			if (random < knightChance) {
-    				availableBlack.add(new Knight(new ImageIcon(ImageIO.read(new File("knight_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'n'));
+    				availableBlack.add(new Knight(new ImageIcon(ImageIO.read(new File("pieces/knight_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'n'));
     			}
     			knightChance /= 2;
     		}
@@ -275,11 +275,11 @@ public class Board extends JPanel
     		while (pawnChance > 0) {
     			random = Math.random();
     			if (random < pawnChance) {
-    				availableWhite.add(new Pawn(new ImageIcon(ImageIO.read(new File("pawn_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'P'));
+    				availableWhite.add(new Pawn(new ImageIcon(ImageIO.read(new File("pieces/pawn_white.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "White", 'P'));
     			}
     			random = Math.random();
     			if (random < pawnChance) {
-    				availableBlack.add(new Pawn(new ImageIcon(ImageIO.read(new File("pawn_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'p'));
+    				availableBlack.add(new Pawn(new ImageIcon(ImageIO.read(new File("pieces/pawn_black.png")).getScaledInstance(90, 90, java.awt.Image.SCALE_SMOOTH)), "Black", 'p'));
     			}
     			pawnChance -= 1f / 8f;
     		}
