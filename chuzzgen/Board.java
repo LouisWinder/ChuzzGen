@@ -423,7 +423,7 @@ public class Board extends JPanel
     	int evaluation = 0;
     	String root = System.getProperty("user.dir");
     	// Path to the Stockfish executable
-    	final String STOCKFISH_VERSION = "/stockfish-windows-x86-64-avx2.exe";
+    	final String STOCKFISH_VERSION = ""; // Path to Stockfish executable like: "/[STOCKFISH_EXE]"
     	final String STOCKFISH_PATH = root + STOCKFISH_VERSION;
     	try {
     		ProcessBuilder pb = new ProcessBuilder(STOCKFISH_PATH);
