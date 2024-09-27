@@ -26,3 +26,8 @@ How to run
 2) Type 'javac *.java' in the Terminal to compile all .java files
 3) Navigate up one directory to 'ChuzzGen/'
 4) Run the program by typing 'java chuzzgen.Main'
+
+------------------------------------------------------------
+
+For a technical description of how generation works and analysis from a computational creativity
+standpoint, check out the [paper](ChuzzGen_paper.pdf).
